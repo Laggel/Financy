@@ -1,0 +1,49 @@
+﻿@model Financy.Models.EstadoModel
+
+@{
+    ViewBag.Title = "Financy";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h2>Una SIMPLE herramienta para llevar tu SIMPLE presupuesto.</h2>
+            </hgroup>
+            <p>
+                Por fin una herramienta para finanzas personales con exactamente lo que necesitas.
+            </p>
+        </div>
+    </section>
+}
+<div style="width:70%;" class="float-left">
+<h3>Herramientas</h3>
+<ol class="round">
+    <li class="one">
+        <h5>@Html.ActionLink("Cuentas", "Index", "Cuenta")</h5>
+        <br />
+    </li>
+
+    <li class="two">
+        <h5>@Html.ActionLink("Ingresos", "Index", "Entrada")</h5>
+        <br />
+    </li>
+
+    <li class="three">
+        <h5>@Html.ActionLink("Presupuesto", "Index", "Presupuesto")</h5>
+        <br />
+    </li>
+
+    <li class="four">
+        <h5>@Html.ActionLink("Transacciones", "Index", "Transacciones")</h5>
+        <br />
+    </li>
+
+</ol>
+</div>
+
+@if (User.Identity.IsAuthenticated)
+{
+<div style="width:30%;" class="float-right">
+    @Html.Partial("_Estado", Model)
+</div>
+}

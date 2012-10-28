@@ -1,0 +1,37 @@
+﻿@model List<Financy.Data.Cuenta>
+
+@{
+    ViewBag.Title = "Estados";
+}
+
+@*<h2>Estado</h2>*@
+
+@using (Html.BeginForm()) {
+
+
+<h2>Cuentas</h2>
+
+       
+<table>
+
+    <tr>
+        <th>
+            Cuenta
+        </th>
+        <th>
+            Balance
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balanc)
+        </td>
+    </tr>
+    }
+</table>
+}
