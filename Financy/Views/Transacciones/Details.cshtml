@@ -1,0 +1,57 @@
+﻿@model Financy.Data.Transaccion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Transaccion</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cuenta.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cuenta.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fecha)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fecha)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Monto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Monto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TransaccionProyectada_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TransaccionProyectada_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Estado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Estado)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Transaccion_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
