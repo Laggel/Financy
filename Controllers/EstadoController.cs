@@ -31,7 +31,8 @@ namespace Financy.Controllers
 
             Estado.Presupuesto = Balance.GetPresupuesto(db, DateTime.Now, User.Identity.Name);
 
-            ViewBag.Ingresos = db.Transacciones.Where(x => x.Monto > 0).Sum(x => x.Monto).ToString("C0"); 
+            ViewBag.Balance = Estado.Cuentas.Sum(x => x.Monto).ToString("C0");
+            ViewBag.Ingresos = db.Transacciones.Where(x => x.Monto > 0 && x.Cuenta.User == User.Identity.Name).Sum(x => x.Monto).ToString("C0"); 
             ViewBag.Gastado = Estado.Presupuesto.Sum(x => x.Gastado).ToString("C0");
             ViewBag.Limite = Estado.Presupuesto.Sum(x => x.Limite).ToString("C0");
 

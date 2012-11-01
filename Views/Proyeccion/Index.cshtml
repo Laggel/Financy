@@ -1,9 +1,47 @@
-﻿@model List<Financy.Data.Cuenta>
+﻿@model Financy.Models.ProyeccionModel
 
 @{
     ViewBag.Title = "Proyección";
 }
 
+<div style="width:50%;" class="float-left">
 <h2>Proyección</h2>
 
-@Html.Partial("_Cuenta", Model);
+@using (Html.BeginForm()) 
+{
+
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TransaccionTemp</legend>
+        <br />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fecha, "Fecha Futura")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fecha)
+            @Html.ValidationMessageFor(model => model.Fecha)
+        </div>
+
+        
+        <p>
+            <input type="submit" value="Proyectar" />
+        </p>
+    </fieldset>
+}
+</div>
+
+@if (Model != null)
+{
+    if (Model.Cuentas != null) 
+    {
+<div style="width:50%;" class="float-right" >
+    @Html.Partial("_Cuenta", Model.Cuentas)
+</div>
+
+    <div class="clearBoth"></div>
+<div class="abs">
+    @Html.Partial("_Highcharts",Model.Chart)
+</div>
+    }
+}

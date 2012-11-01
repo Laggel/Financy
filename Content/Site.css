@@ -582,6 +582,9 @@ th {
         font-size: 0.75em;
     }
 
+    .clearBoth {
+    clear: both;
+    }
     th.asc a:after {
         content: '▲';
     }
