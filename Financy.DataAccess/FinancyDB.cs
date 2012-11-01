@@ -12,8 +12,8 @@ namespace Financy.DataAccess
         public FinancyDB()
             : base("FinancyDB")
         {
-            Database.SetInitializer<FinancyDB>(null);
-            //Database.SetInitializer(new CreateDatabaseIfNotExists<FinancyDB>());
+            //Database.SetInitializer<FinancyDB>(null);
+            Database.SetInitializer(new CreateDatabaseIfNotExists<FinancyDB>());
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<FinancyDB, Configuration>());
         }
 

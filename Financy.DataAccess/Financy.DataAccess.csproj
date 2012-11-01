@@ -64,22 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
-    <Compile Include="Migrations\201210280423263_c23.cs" />
-    <Compile Include="Migrations\201210280423263_c23.Designer.cs">
-      <DependentUpon>201210280423263_c23.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201210280434103_c24.cs" />
-    <Compile Include="Migrations\201210280434103_c24.Designer.cs">
-      <DependentUpon>201210280434103_c24.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201210280448125_addUser.cs" />
-    <Compile Include="Migrations\201210280448125_addUser.Designer.cs">
-      <DependentUpon>201210280448125_addUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201210280529100_addTransTemp.cs" />
-    <Compile Include="Migrations\201210280529100_addTransTemp.Designer.cs">
-      <DependentUpon>201210280529100_addTransTemp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="FinancyDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,20 +77,6 @@
       <Project>{211dd203-0043-4e50-91ab-d6a1c3c03d8e}</Project>
       <Name>Financy.Data</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201210280423263_c23.resx">
-      <DependentUpon>201210280423263_c23.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201210280434103_c24.resx">
-      <DependentUpon>201210280434103_c24.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201210280448125_addUser.resx">
-      <DependentUpon>201210280448125_addUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201210280529100_addTransTemp.resx">
-      <DependentUpon>201210280529100_addTransTemp.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
